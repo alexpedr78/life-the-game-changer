@@ -6,27 +6,39 @@ h1,
 h2 {
   text-align: center;
 }
-#game-section {
+#game-screen {
+  position: absolute;
+  display: flex;
   width: 100%;
   height: 100%;
 }
 #game {
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  max-width: 503px;
+  flex-direction: column;
+  max-width: 520px;
   height: 740px;
-  border: 1px solid black;
-
-  background-color: blue;
+  border: 10px solid black;
+  background-color: rgb(10, 241, 10);
+  gap: 5px;
+}
+.divLine {
+  display: flex;
 }
 
 .cell {
+  display: flex;
   width: 50px;
   height: 50px;
   border: 1px solid black;
   background-color: turquoise;
   margin: 0;
+}
+#restart {
+  height: 30%;
+}
+#modal {
+  position: absolute;
 }
 
 #start-game-btn {
@@ -34,12 +46,13 @@ h2 {
   margin: 0 auto;
 }
 .playerPosition {
-  background-color: red;
+  background-color: rgb(236, 4, 159);
   border-radius: 10px;
 }
 .obstacles {
   background-color: black;
   box-shadow: 10px 5px 5px red;
+  border-radius: 3px;
 }
 
 .unclickable {
