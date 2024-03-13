@@ -159,7 +159,7 @@ gameContainer.addEventListener("click", (event) => {
     }, 2000);
   }
 
-  if (player.x === 2) {
+  if (player.x === 13) {
     gameContainer.innerHTML = "";
     gameScreen.hidden = true;
     gameScreen.classList.remove("flex");
