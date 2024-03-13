@@ -1,7 +1,8 @@
-const inputName = document.getElementById("name");
+// const nameHolder = document.getElementById("name-register").value;
+
 export class Player {
-  constructor(name) {
-    this.name = name;
+  constructor() {
+    this.name = document.getElementById("name-register").value;
     this.x = 0;
     this.y = 0;
     this.position = null;

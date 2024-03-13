@@ -13,16 +13,24 @@
       <h1>LIFE</h1>
       <h2>The game changer</h2>
       <div id="number-of-game"></div>
-      <div>
+      <div id="landing-button">
         <button id="rule-btn">rules</button>
         <button id="start-init">start</button>
       </div>
+      <a href="https://wtfhappenedin1971.com/">food for thougt </a>
     </section>
 
     <section hidden id="rule-screen">
       <button id="menu">menu principal</button>
       <div id="rule-text">
-        <img src="" alt="" />
+        <p>
+          This game was invented during a storm, lost in the middle of nowhere
+          an old man discover that we can create a game with basic javascript
+          and html that will recreate the hazard of life. This game aims to show
+          how life is about making decision without always knowing what comes
+          next
+        </p>
+        <p></p>
       </div>
     </section>
 
@@ -30,13 +38,18 @@
       <h1>initialize page</h1>
       <button id="send-name">next</button>
       <button id="menu-from-init">menu</button>
-      <input type="text" name="" id="name" />
-      <label for=""></label>
+      <form>
+        <input type="text" name="" id="name-register" />
+        <label for="">your name</label>
+      </form>
     </section>
 
     <section hidden id="game-screen">
       <dialog id="dialog">
         <p>got to next line</p>
+      </dialog>
+      <dialog id="dialog-error">
+        <p>too fast</p>
       </dialog>
       <div hidden id="game"></div>
 

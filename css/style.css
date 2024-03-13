@@ -7,9 +7,15 @@ h2 {
   text-align: center;
 }
 #landing-page {
-  height: 100%;
+  position: relative;
+  background-image: url(../img/—Pngtree—cosmic\ orbit\ of\ solar\ system_6857440.png);
+  background-size: contain;
+  aspect-ratio: 1;
   width: 100%;
-  background-color: aquamarine;
+}
+#landing-button {
+  position: absolute;
+  top: 500px;
 }
 #game-screen {
   background-color: aqua;
@@ -66,6 +72,15 @@ h2 {
   position: absolute;
   right: 650px;
   top: 400px;
+  background-color: black;
+  color: white;
+  height: 100px;
+  aspect-ratio: 1;
+}
+#dialog-error {
+  position: absolute;
+  right: 650px;
+  top: 300px;
   background-color: black;
   color: white;
   height: 100px;
