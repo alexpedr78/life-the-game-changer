@@ -12,33 +12,42 @@
     <section id="landing-page">
       <h1>LIFE</h1>
       <h2>The game changer</h2>
-      <button id="rule-btn">rules</button>
-      <button id="start-init">start</button>
+      <div id="number-of-game"></div>
+      <div>
+        <button id="rule-btn">rules</button>
+        <button id="start-init">start</button>
+      </div>
     </section>
 
     <section hidden id="rule-screen">
+      <button id="menu">menu principal</button>
       <div id="rule-text">
         <img src="" alt="" />
-        <button class="menu">menu principal</button>
       </div>
     </section>
 
     <section hidden id="initialize-screen">
       <h1>initialize page</h1>
-      <button id="send">next</button>
-      <input type="text" name="" id="" />
+      <button id="send-name">next</button>
+      <button id="menu-from-init">menu</button>
+      <input type="text" name="" id="name" />
       <label for=""></label>
     </section>
 
     <section hidden id="game-screen">
-      <modal hidden id="modal">choose next line</modal>
-      <div id="game"></div>
-      <button id="restart">restart</button>
+      <dialog id="dialog">
+        <p>got to next line</p>
+      </dialog>
+      <div hidden id="game"></div>
+
+      <button hidden id="new-board">restart</button>
+      <button hidden id="menu-from-game">menu</button>
     </section>
 
     <section hidden id="end-screen">
-      <button id="menu">menu principal</button>
-      <button id="restart2">restart</button>
+      <button id="menu-from-end">menu principal</button>
+      <div id="text-end"></div>
+      <button id="start-from-end">restart</button>
     </section>
   </body>
 </html>

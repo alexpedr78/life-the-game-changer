@@ -6,11 +6,23 @@ h1,
 h2 {
   text-align: center;
 }
+#landing-page {
+}
 #game-screen {
-  position: absolute;
-  display: flex;
+  background-color: aqua;
+  position: relative;
+
   width: 100%;
   height: 100%;
+}
+#rule-screen {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: aqua;
+}
+#menu {
+  position: absolute;
+  left: auto 50px;
 }
 #game {
   margin: 0 auto;
@@ -18,9 +30,9 @@ h2 {
   flex-direction: column;
   max-width: 520px;
   height: 740px;
-  border: 10px solid black;
+  border: 1px solid black;
   background-color: rgb(10, 241, 10);
-  gap: 5px;
+  gap: 10px;
 }
 .divLine {
   display: flex;
@@ -28,23 +40,44 @@ h2 {
 
 .cell {
   display: flex;
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
   background-color: turquoise;
   margin: 0;
 }
-#restart {
+#new-board {
   height: 30%;
 }
-#modal {
-  position: absolute;
+#menu-from-game {
+  height: 30%;
+  aspect-ratio: 1;
+}
+.flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
-#start-game-btn {
-  width: 100px;
-  margin: 0 auto;
+#dialog {
+  position: absolute;
+  right: 650px;
+  top: 400px;
+  background-color: black;
+  color: white;
+  height: 100px;
+  aspect-ratio: 1;
 }
+
+.timer {
+  width: 50px;
+  aspect-ratio: 1;
+}
+.name-recipient {
+  width: 50px;
+  aspect-ratio: 1;
+}
+
 .playerPosition {
   background-color: rgb(236, 4, 159);
   border-radius: 10px;
@@ -55,6 +88,6 @@ h2 {
   border-radius: 3px;
 }
 
-.unclickable {
-  pointer-events: none;
+#menu-from-init {
+  height: 30px;
 }
