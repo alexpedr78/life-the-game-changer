@@ -27,6 +27,8 @@ let player;
 let countTimer = 0;
 let timerInterval = null;
 const numberOfGame = document.getElementById("number-of-game");
+/////
+numberOfGame.textContent = count;
 
 newGameButton.addEventListener("click", () => {
   initializeScreen.hidden = true;
@@ -75,8 +77,6 @@ newBoardButton.addEventListener("click", () => {
   createBoard();
 });
 
-numberOfGame.textContent = count;
-
 function createBoard() {
   count++;
   numberOfGame.textContent = count;
@@ -109,87 +109,101 @@ function createBoard() {
 
     timer.textContent = countTimer;
   }, 1000);
-  addEvent();
+  // removeEventListener("click", (event) => {
+  //   attachEventToGameContainer;
+  // });
+  // gameContainer.addEventListener("click", (event) => {
+  //   attachEventToGameContainer;
+  // });
 }
 
 ////
-function addEvent() {
-  gameContainer.addEventListener("click", (event) => {
-    if (timeoutId) return;
-    dialog.close();
-    const clickedCell = event.target;
-    let clickedCellX = Number(clickedCell.getAttribute("x"));
 
-    if (player.x + 1 === clickedCellX) {
-      player.moveUp();
-      player.hidePlayer();
-      player.setNewPosition(clickedCell);
-      player.displayPlayer();
+gameContainer.addEventListener("click", (event) => {
+  attachEventToGameContainer(event);
+});
 
-      setRandomObstacle(3);
-      setRandomObstacle(3);
-
-      setRandomObstacle(6);
-      setRandomObstacle(6);
-      setRandomObstacle(6);
-
-      setRandomObstacle(9);
-      setRandomObstacle(9);
-      setRandomObstacle(9);
-
-      setRandomObstacle(12);
-      setRandomObstacle(12);
-      setRandomObstacle(12);
-
-      setRandomObstacle(11);
-      setRandomObstacle(11);
-      setRandomObstacle(11);
-
-      if (player.position.classList.contains("obstacles")) {
-        player.hidePlayer();
-        console.log(player.position);
-        player.moveDown();
-        const newPosition = document.querySelector(
-          `.cell[x="${player.x}"][y="${player.y}"]`
-        );
-        player.setNewPosition(newPosition);
-        player.displayPlayer();
-      }
-
-      timeoutId = setTimeout(() => {
-        document.querySelectorAll(".obstacles").forEach((cell) => {
-          cell.classList.remove("obstacles");
-          timeoutId = null;
-        });
-        dialog.show();
-      }, 2000);
-    } else {
-      dialogError.show();
-      setTimeout(() => {
-        dialogError.close();
-      }, 500);
-    }
-
-    if (player.x === 2) {
-      dialog.close();
-      gameContainer.innerHTML = "";
-      gameScreen.hidden = true;
-      gameScreen.classList.remove("flex");
-      endScreen.hidden = false;
-      clearInterval(timerInterval);
-    }
-  });
-}
-
-newBoardFromEndButton.addEventListener("click", () => {
+function attachEventToGameContainer(event) {
+  console.log("before");
+  debugger;
+  if (timeoutId) return;
+  console.log("after");
   dialog.close();
-  gameContainer.innerHTML = "";
+  const clickedCell = event.target;
+  let clickedCellX = Number(clickedCell.getAttribute("x"));
+
+  if (player.x + 1 === clickedCellX) {
+    player.moveUp();
+    player.hidePlayer();
+    player.setNewPosition(clickedCell);
+    player.displayPlayer();
+
+    setRandomObstacle(3);
+    setRandomObstacle(3);
+
+    setRandomObstacle(6);
+    setRandomObstacle(6);
+    setRandomObstacle(6);
+
+    setRandomObstacle(9);
+    setRandomObstacle(9);
+    setRandomObstacle(9);
+
+    setRandomObstacle(12);
+    setRandomObstacle(12);
+    setRandomObstacle(12);
+
+    setRandomObstacle(11);
+    setRandomObstacle(11);
+    setRandomObstacle(11);
+
+    if (player.position.classList.contains("obstacles")) {
+      player.hidePlayer();
+      console.log(player.position);
+      player.moveDown();
+      const newPosition = document.querySelector(
+        `.cell[x="${player.x}"][y="${player.y}"]`
+      );
+      player.setNewPosition(newPosition);
+      player.displayPlayer();
+    }
+
+    timeoutId = setTimeout(() => {
+      document.querySelectorAll(".obstacles").forEach((cell) => {
+        cell.classList.remove("obstacles");
+        timeoutId = null;
+      });
+      dialog.show();
+    }, 1500);
+  } else {
+    dialogError.show();
+    setTimeout(() => {
+      dialogError.close();
+    }, 500);
+  }
+
+  if (player.x === 2) {
+    dialog.close();
+    gameContainer.innerHTML = "";
+    gameScreen.hidden = true;
+    gameScreen.classList.remove("flex");
+    endScreen.hidden = false;
+    clearInterval(timerInterval);
+  }
+}
+newBoardFromEndButton.addEventListener("click", () => {
   endScreen.hidden = true;
   gameScreen.classList.add("flex");
   gameScreen.hidden = false;
-  newBoardButton.hidden = false;
-  backTomenuButtonFromGame.hidden = false;
   countTimer = 0;
+  dialog.close();
+  timeoutId = null;
+  // removeEventListener("click", (event) => {
+  //   attachEventToGameContainer;
+  // });
+  // gameContainer.addEventListener("click", (event) => {
+  //   attachEventToGameContainer;
+  // });
   createBoard();
 });
 

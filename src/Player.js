@@ -1,5 +1,3 @@
-// const nameHolder = document.getElementById("name-register").value;
-
 export class Player {
   constructor() {
     this.name = document.getElementById("name-register").value;
