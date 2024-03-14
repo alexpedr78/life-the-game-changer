@@ -47,11 +47,11 @@ button:active {
   margin-bottom: 2rem;
 }
 #landing-titles {
-  margin-top: 7rem;
+  margin-top: 1rem;
 }
 #landing-button {
   text-align: center;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 #rule-btn {
   width: 10rem;
@@ -78,6 +78,7 @@ button:active {
   gap: 3rem;
 }
 #rule-text {
+  background: rgba(255, 255, 255, 0.322);
   align-self: center;
   width: 40%;
   text-align: center;
