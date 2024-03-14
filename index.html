@@ -9,20 +9,22 @@
   </head>
 
   <body>
-    <section id="landing-page">
-      <h1>LIFE</h1>
-      <h2>The game changer</h2>
+    <section id="landing-page" class="flex">
+      <div id="landing-titles">
+        <h1>LIFE</h1>
+        <h2>The Game Changer</h2>
+      </div>
       <div id="number-of-game"></div>
       <div id="landing-button">
         <button id="rule-btn">rules</button>
         <button id="start-init">start</button>
       </div>
-      <a href="https://wtfhappenedin1971.com/">food for thougt </a>
+      <a id="link" href="https://wtfhappenedin1971.com/">food for thougt </a>
     </section>
 
     <section hidden id="rule-screen">
-      <button id="menu">menu principal</button>
       <div id="rule-text">
+        <h1>History</h1>
         <p>
           This game was invented during a storm, lost in the middle of nowhere
           an old man discover that we can create a game with basic javascript
@@ -30,17 +32,21 @@
           how life is about making decision without always knowing what comes
           next
         </p>
-        <p></p>
+        <h1>Rules</h1>
+        <p>firslfhdlksqhfksqhfksfksqhflsqfhfq</p>
       </div>
+      <button id="menu">menu principal</button>
     </section>
 
     <section hidden id="initialize-screen">
-      <h1>initialize page</h1>
-      <button id="send-name">next</button>
-      <button id="menu-from-init">menu</button>
+      <h1>Give us your name</h1>
+      <div id="init-buttons">
+        <button id="menu-from-init">menu</button>
+        <button id="send-name">next</button>
+      </div>
       <form>
         <input type="text" name="" id="name-register" />
-        <label for="">your name</label>
+        <label id="label" for="">Write your name please</label>
       </form>
     </section>
 
@@ -52,9 +58,10 @@
         <p>too fast</p>
       </dialog>
       <div hidden id="game"></div>
-
-      <button hidden id="new-board">restart</button>
-      <button hidden id="menu-from-game">menu</button>
+      <div>
+        <button hidden id="new-board">restart</button>
+        <button hidden id="menu-from-game">menu</button>
+      </div>
     </section>
 
     <section hidden id="end-screen">

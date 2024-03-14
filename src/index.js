@@ -1,4 +1,5 @@
 import { Player } from "./Player.js";
+
 // screen
 const landingScreen = document.getElementById("landing-page");
 const initializeScreen = document.getElementById("initialize-screen");
@@ -6,7 +7,10 @@ const gameScreen = document.getElementById("game-screen");
 const ruleScreen = document.getElementById("rule-screen");
 const endScreen = document.getElementById("end-screen");
 
-// button
+// button ajouter fonctionnalité meilleur score
+//  style all buttons + everypage
+// ajouter des sons
+//
 
 const ruleButton = document.getElementById("rule-btn");
 const startInitButton = document.getElementById("start-init");
@@ -31,32 +35,38 @@ const numberOfGame = document.getElementById("number-of-game");
 numberOfGame.textContent = count;
 
 newGameButton.addEventListener("click", () => {
+  timeoutId = null;
   initializeScreen.hidden = true;
   newBoardButton.hidden = false;
   backTomenuButtonFromGame.hidden = false;
-  // gameScreen.hidden = false;
   gameScreen.classList.add("flex");
+  initializeScreen.classList.remove("flex");
   createBoard();
 });
-
 ruleButton.addEventListener("click", () => {
   landingScreen.hidden = true;
   ruleScreen.hidden = false;
+  landingScreen.classList.remove("flex");
+  ruleScreen.classList.add("flex");
 });
-
 backTomenuButtonFromRules.addEventListener("click", () => {
   ruleScreen.hidden = true;
   landingScreen.hidden = false;
+  ruleScreen.classList.remove("flex");
+  landingScreen.classList.add("flex");
 });
 startInitButton.addEventListener("click", () => {
   landingScreen.hidden = true;
   initializeScreen.hidden = false;
+  initializeScreen.classList.add("flex");
+  landingScreen.classList.remove("flex");
 });
 backToMenuButtonFromInit.addEventListener("click", () => {
   initializeScreen.hidden = true;
   landingScreen.hidden = false;
+  landingScreen.classList.add("flex");
+  initializeScreen.classList.remove("flex");
 });
-
 backTomenuButtonFromGame.addEventListener("click", () => {
   dialog.close();
   countTimer = 0;
@@ -66,17 +76,42 @@ backTomenuButtonFromGame.addEventListener("click", () => {
   gameScreen.hidden = true;
   gameScreen.classList.remove("flex");
   landingScreen.hidden = false;
+  landingScreen.classList.add("flex");
   clearInterval(timerInterval);
 });
-
 newBoardButton.addEventListener("click", () => {
   dialog.close();
   gameContainer.innerHTML = "";
   countTimer = 0;
   clearInterval(timerInterval);
   createBoard();
+  timeoutId = null;
+});
+newBoardFromEndButton.addEventListener("click", () => {
+  endScreen.hidden = true;
+  gameScreen.classList.add("flex");
+  gameScreen.hidden = false;
+  countTimer = 0;
+  dialog.close();
+  timeoutId = null;
+  // removeEventListener("click", (event) => {
+  //   attachEventToGameContainer;
+  // });
+  // gameContainer.addEventListener("click", (event) => {
+  //   attachEventToGameContainer;
+  // });
+  createBoard();
+});
+menuFromEndButton.addEventListener("click", () => {
+  // dialog.close();
+  // gameContainer.innerHTML = "";
+  landingScreen.classList.add("flex");
+  timeoutId = null;
+  endScreen.hidden = true;
+  landingScreen.hidden = false;
 });
 
+//
 function createBoard() {
   count++;
   numberOfGame.textContent = count;
@@ -109,23 +144,15 @@ function createBoard() {
 
     timer.textContent = countTimer;
   }, 1000);
-  // removeEventListener("click", (event) => {
-  //   attachEventToGameContainer;
-  // });
-  // gameContainer.addEventListener("click", (event) => {
-  //   attachEventToGameContainer;
-  // });
 }
-
 ////
-
 gameContainer.addEventListener("click", (event) => {
   attachEventToGameContainer(event);
 });
 
 function attachEventToGameContainer(event) {
   console.log("before");
-  debugger;
+
   if (timeoutId) return;
   console.log("after");
   dialog.close();
@@ -182,7 +209,7 @@ function attachEventToGameContainer(event) {
     }, 500);
   }
 
-  if (player.x === 2) {
+  if (player.x === 6) {
     dialog.close();
     gameContainer.innerHTML = "";
     gameScreen.hidden = true;
@@ -191,28 +218,6 @@ function attachEventToGameContainer(event) {
     clearInterval(timerInterval);
   }
 }
-newBoardFromEndButton.addEventListener("click", () => {
-  endScreen.hidden = true;
-  gameScreen.classList.add("flex");
-  gameScreen.hidden = false;
-  countTimer = 0;
-  dialog.close();
-  timeoutId = null;
-  // removeEventListener("click", (event) => {
-  //   attachEventToGameContainer;
-  // });
-  // gameContainer.addEventListener("click", (event) => {
-  //   attachEventToGameContainer;
-  // });
-  createBoard();
-});
-
-menuFromEndButton.addEventListener("click", () => {
-  // dialog.close();
-  // gameContainer.innerHTML = "";
-  endScreen.hidden = true;
-  landingScreen.hidden = false;
-});
 
 function setRandomObstacle(num) {
   const line = document.querySelectorAll(`.cell[x="${num}"]`);
