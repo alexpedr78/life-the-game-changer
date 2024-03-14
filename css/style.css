@@ -22,7 +22,6 @@ button:hover {
   font-weight: 600;
   color: black;
   cursor: pointer;
-
   height: 7rem;
   text-align: center;
   border: none;
@@ -76,7 +75,6 @@ button:active {
   background-attachment: fixed;
   width: 100%;
   aspect-ratio: 1.5;
-
   flex-direction: column;
   gap: 3rem;
 }
@@ -197,12 +195,13 @@ button:active {
   aspect-ratio: 1;
 }
 .timer {
+  font-weight: 900;
   margin-top: 1rem;
   align-self: center;
   text-align: center;
   width: 100%;
   height: 100%;
-  color: white;
+  color: black;
 }
 .name-recipient {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
