@@ -89,6 +89,7 @@ newBoardButton.addEventListener("click", () => {
 });
 newBoardFromEndButton.addEventListener("click", () => {
   endScreen.hidden = true;
+  endScreen.classList.remove("flex");
   gameScreen.classList.add("flex");
   gameScreen.hidden = false;
   countTimer = 0;
@@ -105,6 +106,7 @@ newBoardFromEndButton.addEventListener("click", () => {
 menuFromEndButton.addEventListener("click", () => {
   // dialog.close();
   // gameContainer.innerHTML = "";
+  endScreen.classList.remove("flex");
   landingScreen.classList.add("flex");
   timeoutId = null;
   endScreen.hidden = true;
@@ -122,7 +124,7 @@ function createBoard() {
     for (let j = 10; j > 0; j--) {
       const cell = document.createElement("div");
       cell.classList.add("cell");
-      cell.textContent = i;
+      // cell.textContent = i;
       cell.setAttribute("x", i);
       cell.setAttribute("y", j);
       player.cellArray.push(cell);
@@ -167,6 +169,8 @@ function attachEventToGameContainer(event) {
 
     setRandomObstacle(3);
     setRandomObstacle(3);
+    setRandomObstacle(3);
+    setRandomObstacle(3);
 
     setRandomObstacle(6);
     setRandomObstacle(6);
@@ -175,7 +179,9 @@ function attachEventToGameContainer(event) {
     setRandomObstacle(9);
     setRandomObstacle(9);
     setRandomObstacle(9);
+    setRandomObstacle(9);
 
+    setRandomObstacle(12);
     setRandomObstacle(12);
     setRandomObstacle(12);
     setRandomObstacle(12);
@@ -214,6 +220,7 @@ function attachEventToGameContainer(event) {
     gameContainer.innerHTML = "";
     gameScreen.hidden = true;
     gameScreen.classList.remove("flex");
+    endScreen.classList.add("flex");
     endScreen.hidden = false;
     clearInterval(timerInterval);
   }

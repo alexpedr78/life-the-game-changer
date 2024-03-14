@@ -6,6 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script type="module" src="./src/index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -19,54 +25,67 @@
         <button id="rule-btn">rules</button>
         <button id="start-init">start</button>
       </div>
-      <a id="link" href="https://wtfhappenedin1971.com/">food for thougt </a>
+      <a id="link" href="https://wtfhappenedin1971.com/">Food For Thougts </a>
     </section>
 
     <section hidden id="rule-screen">
       <div id="rule-text">
         <h1>History</h1>
         <p>
-          This game was invented during a storm, lost in the middle of nowhere
-          an old man discover that we can create a game with basic javascript
-          and html that will recreate the hazard of life. This game aims to show
-          how life is about making decision without always knowing what comes
-          next
+          This game was invented during a storm. Lost in the middle of nowhere
+          with a pc an old man discover that we can create a game with basic
+          javascript and html that will recreate the hazard of life. <br />
+          This game aims to show how life is about making decision without
+          always knowing what comes next.
         </p>
         <h1>Rules</h1>
-        <p>firslfhdlksqhfksqhfksfksqhflsqfhfq</p>
+        <ul>
+          <li>When you start you just born so you begin from the bottom</li>
+          <li>You can choose any spot on the next line</li>
+          <li>Always line by line</li>
+          <li>If you are hit by the moon you come down two lines</li>
+          <li>Choose wisely but listen to your instinct</li>
+        </ul>
       </div>
       <button id="menu">menu principal</button>
     </section>
 
     <section hidden id="initialize-screen">
-      <h1>Give us your name</h1>
+      <h1>Give us your name <br />Or your credit card number</h1>
       <div id="init-buttons">
         <button id="menu-from-init">menu</button>
         <button id="send-name">next</button>
       </div>
       <form>
-        <input type="text" name="" id="name-register" />
-        <label id="label" for="">Write your name please</label>
+        <input type="text" name="" id="name-register" /> <br />
+        <label id="label" for="">Write your name and press next</label>
       </form>
     </section>
 
     <section hidden id="game-screen">
+      <audio src=""></audio>
       <dialog id="dialog">
         <p>got to next line</p>
       </dialog>
       <dialog id="dialog-error">
         <p>too fast</p>
       </dialog>
+      <button hidden id="new-board">restart</button>
       <div hidden id="game"></div>
-      <div>
-        <button hidden id="new-board">restart</button>
-        <button hidden id="menu-from-game">menu</button>
-      </div>
+
+      <button hidden id="menu-from-game">menu</button>
     </section>
 
     <section hidden id="end-screen">
       <button id="menu-from-end">menu principal</button>
-      <div id="text-end"></div>
+      <div id="text-end">
+        <p>
+          You have just finish the game, Congratulations! <br />
+          But it is LIFE so when you are finish your dead ! <br />
+          Go back to menu for starting a new life, <br />
+          and maybe anjoy every moments even when the moon hit you hard!!
+        </p>
+      </div>
       <button id="start-from-end">restart</button>
     </section>
   </body>
