@@ -69,38 +69,41 @@ button:active {
   font-weight: 900;
 }
 #rule-screen {
+  position: relative;
   background-image: url(../img/max-larochelle-uu-Jw5SunYI-unsplash.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
-  flex-direction: column;
+  height: 100vh;
   gap: 3rem;
 }
-#rule-text {
-  background: rgba(255, 255, 255, 0.322);
-  align-self: center;
-  width: 40%;
+#rules {
+  width: 30%;
+  justify-self: flex-end;
+}
+#history {
+  color: beige;
+  justify-self: flex-end;
+  align-self: flex-start;
+  width: 30%;
+  height: 30%;
   text-align: center;
-}
-#rule-text > ul {
-  font-style: oblique;
-  font-size: 1.5rem;
-  list-style: none;
-}
-#rule-text > h1 {
-  margin-top: 0.5rem;
-  font-size: 2rem;
-}
-#rule-text > p {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-style: italic;
-  margin-bottom: 0.5rem;
+  padding: 10px;
 }
 #menu {
-  align-self: center;
+  font-size: 2rem;
+  font-weight: 900;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 4rem;
 }
+#archive {
+  position: absolute;
+  top: 90%;
+  right: 10%;
+}
+
 #initialize-screen {
   align-items: center;
   flex-direction: column;
