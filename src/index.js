@@ -189,7 +189,10 @@ function attachEventToGameContainer(event) {
     setRandomObstacle(9);
     setRandomObstacle(9);
     setRandomObstacle(9);
+    setRandomObstacle(9);
+    setRandomObstacle(9);
 
+    setRandomObstacle(12);
     setRandomObstacle(12);
     setRandomObstacle(12);
     setRandomObstacle(12);
@@ -226,7 +229,10 @@ function attachEventToGameContainer(event) {
     }, 500);
   }
 
-  if (player.x === 6) {
+  if (player.x === 13) {
+    let ouhYeah = new Audio("../sound/oh_yeah_wav_cut.wav");
+    ouhYeah.play();
+    music.pause();
     dialog.close();
     gameContainer.innerHTML = "";
     gameScreen.hidden = true;
@@ -234,6 +240,9 @@ function attachEventToGameContainer(event) {
     endScreen.classList.add("flex");
     endScreen.hidden = false;
     clearInterval(timerInterval);
+  } else {
+    let again = new Audio("../sound/yeah_random_ringmodulator_chopped.wav");
+    again.play();
   }
 }
 
