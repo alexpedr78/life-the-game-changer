@@ -200,6 +200,8 @@ function attachEventToGameContainer(event) {
     setRandomObstacle(11);
 
     if (player.position.classList.contains("obstacles")) {
+      let explode = new Audio("../sound/rumble.flac");
+      explode.play();
       player.hidePlayer();
       console.log(player.position);
       player.moveDown();
