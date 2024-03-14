@@ -40,7 +40,7 @@ button:active {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
+  height: 100vh;
   flex-direction: column;
 }
 #landing-page > h1 {
@@ -51,7 +51,7 @@ button:active {
 }
 #landing-button {
   text-align: center;
-  margin-bottom: 20rem;
+  margin-bottom: 10rem;
 }
 #rule-btn {
   width: 10rem;
@@ -73,8 +73,7 @@ button:active {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  width: 100%;
-  aspect-ratio: 1.5;
+  height: 100vh;
   flex-direction: column;
   gap: 3rem;
 }
@@ -85,21 +84,24 @@ button:active {
 }
 #rule-text > ul {
   font-style: oblique;
-  font-size: 2rem;
+  font-size: 1.5rem;
   list-style: none;
 }
 #rule-text > h1 {
-  font-size: 3rem;
+  margin-top: 0.5rem;
+  font-size: 2rem;
 }
 #rule-text > p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 2rem;
   font-style: italic;
+  margin-bottom: 0.5rem;
 }
 #menu {
   align-self: center;
 }
 #initialize-screen {
+  height: 100vh;
   align-items: center;
   flex-direction: column;
   gap: 3rem;
@@ -137,7 +139,7 @@ button:active {
 #game-screen {
   position: relative;
   /* width: 100%;*/
-
+  height: 100vh;
   background-image: url(../img/denis-degioanni-9wH624ALFQA-unsplash.jpg);
   background-size: cover;
 }
