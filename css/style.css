@@ -230,8 +230,6 @@ button:active {
 #end-screen {
   align-items: center;
   justify-content: space-between;
-
-  height: 100vh;
   background-image: url(../img/adrian-pelletier-Mcc5uQF9Ucw-unsplash.png);
   background-size: contains;
   background-position: center;
