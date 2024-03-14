@@ -40,7 +40,7 @@ button:active {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh;
+
   flex-direction: column;
 }
 #landing-page > h1 {
@@ -73,7 +73,7 @@ button:active {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh;
+
   flex-direction: column;
   gap: 3rem;
 }
@@ -101,7 +101,6 @@ button:active {
   align-self: center;
 }
 #initialize-screen {
-  height: 100vh;
   align-items: center;
   flex-direction: column;
   gap: 3rem;
@@ -139,7 +138,7 @@ button:active {
 #game-screen {
   position: relative;
   /* width: 100%;*/
-  height: 100vh;
+
   background-image: url(../img/denis-degioanni-9wH624ALFQA-unsplash.jpg);
   background-size: cover;
 }
