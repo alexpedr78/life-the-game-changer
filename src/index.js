@@ -31,6 +31,9 @@ let player;
 let countTimer = 0;
 let timerInterval = null;
 const numberOfGame = document.getElementById("number-of-game");
+const music = document.getElementById("music");
+const startMusic = document.getElementById("play-music");
+const stopMusic = document.getElementById("stop-music");
 /////
 numberOfGame.textContent = count;
 
@@ -111,6 +114,12 @@ menuFromEndButton.addEventListener("click", () => {
   timeoutId = null;
   endScreen.hidden = true;
   landingScreen.hidden = false;
+});
+startMusic.addEventListener("click", () => {
+  music.play();
+});
+stopMusic.addEventListener("click", () => {
+  music.pause();
 });
 
 //

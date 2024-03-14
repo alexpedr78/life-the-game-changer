@@ -246,3 +246,9 @@ button:active {
   stroke-width: 2;
   stroke: #365fa0;
 }
+#play-music {
+  width: 3rem;
+}
+#pause-music {
+  width: 3rem;
+}
