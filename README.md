@@ -10,4 +10,4 @@ It has 5 screens that are 5 sections of the same HTML file (index). The game is 
 
 ### link 
 
-[LIFE]()
+[LIFE](https://alexpedr78.github.io/life-the-game-changer/)
