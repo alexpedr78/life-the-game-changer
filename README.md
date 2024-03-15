@@ -10,4 +10,4 @@ It has 5 screens that are 5 sections of the same HTML file (index). The game is 
 
 ### link 
 
-[life]()
+[LIFE]()
