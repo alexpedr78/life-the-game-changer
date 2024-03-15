@@ -23,6 +23,7 @@ const menuFromEndButton = document.getElementById("menu-from-end");
 const newBoardFromEndButton = document.getElementById("start-from-end");
 const dialog = document.getElementById("dialog");
 const dialogError = document.getElementById("dialog-error");
+const divGame = document.getElementById("div");
 // other
 const gameContainer = document.getElementById("game");
 let count = 0;
@@ -147,7 +148,7 @@ function createBoard() {
   let timer = document.createElement("div");
   timer.classList.add("timer");
   gameContainer.appendChild(timer);
-  gameContainer.appendChild(nameRecipient);
+  divGame.appendChild(nameRecipient);
   timer.textContent = countTimer;
 
   timerInterval = setInterval(() => {
