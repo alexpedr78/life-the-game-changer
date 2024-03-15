@@ -74,15 +74,19 @@ button:active {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  justify-content: space-around;
   height: 100vh;
   gap: 3rem;
 }
 #rules {
+  font-size: 1.5rem;
   width: 30%;
   justify-self: flex-end;
+  color: beige;
 }
 #history {
-  color: beige;
+  color: black;
+  font-size: 1.5rem;
   justify-self: flex-end;
   align-self: flex-start;
   width: 30%;
@@ -94,8 +98,8 @@ button:active {
   font-size: 2rem;
   font-weight: 900;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 45%;
+  top: 80%;
   height: 4rem;
 }
 #archive {
