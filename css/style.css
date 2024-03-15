@@ -105,7 +105,7 @@ button:active {
 #archive {
   position: absolute;
   top: 90%;
-  right: 10%;
+  left: 10%;
 }
 
 #initialize-screen {
