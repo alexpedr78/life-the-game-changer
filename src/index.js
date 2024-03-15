@@ -242,7 +242,7 @@ function attachEventToGameContainer(event) {
     endScreen.hidden = false;
     clearInterval(timerInterval);
   } else {
-    let again = new Audio("../sound/yeah_random_ringmodulator_chopped.wav");
+    let again = new Audio("./sound/yeah_random_ringmodulator_chopped.wav");
     again.play();
   }
 }
