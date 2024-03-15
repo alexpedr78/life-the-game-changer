@@ -210,7 +210,9 @@ button:active {
 }
 
 .name-recipient {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-family: Kode Mono;
   align-self: center;
   text-align: center;
   width: 100%;

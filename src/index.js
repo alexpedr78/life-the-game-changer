@@ -7,11 +7,7 @@ const gameScreen = document.getElementById("game-screen");
 const ruleScreen = document.getElementById("rule-screen");
 const endScreen = document.getElementById("end-screen");
 
-// button ajouter fonctionnalité meilleur score
-//  style all buttons + everypage
-// ajouter des sons
-//
-
+// buttons
 const ruleButton = document.getElementById("rule-btn");
 const startInitButton = document.getElementById("start-init");
 const newBoardButton = document.getElementById("new-board");
@@ -32,12 +28,12 @@ let player;
 let countTimer = 0;
 let timerInterval = null;
 const numberOfGame = document.getElementById("number-of-game");
+numberOfGame.textContent = count;
 const music = document.getElementById("music");
 const startMusic = document.getElementById("play-music");
 const stopMusic = document.getElementById("stop-music");
-/////
-numberOfGame.textContent = count;
 
+///// add event on buttons and on click for the game
 newGameButton.addEventListener("click", () => {
   timeoutId = null;
   initializeScreen.hidden = true;
@@ -122,8 +118,11 @@ startMusic.addEventListener("click", () => {
 stopMusic.addEventListener("click", () => {
   music.pause();
 });
+gameContainer.addEventListener("click", (event) => {
+  attachEventToGameContainer(event);
+});
 
-//
+// functions
 function createBoard() {
   count++;
   numberOfGame.textContent = count;
@@ -157,10 +156,6 @@ function createBoard() {
     timer.textContent = countTimer;
   }, 1000);
 }
-////
-gameContainer.addEventListener("click", (event) => {
-  attachEventToGameContainer(event);
-});
 
 function attachEventToGameContainer(event) {
   console.log("before");
